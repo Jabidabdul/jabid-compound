@@ -61,7 +61,7 @@ const LandingPage = () => {
           {/* Right - Text Content */}
           <div className="w-[55%] flex flex-row items-start justify-start sm:justify-start  md:items-left text-center md:text-left space-y-6">
             <div className="text-center md:pt-[15vh] lg:pt[25vh]">
-              <h1 className="text-bounce-in-left delay-1000 text-4xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight font-[300] text-white font-display">
+              <h1 className="text-bounce-in-left delay-1000 text-4xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight font-[300] text-white font-display">
                 earn{" "}
                 <span className="text-[#704bff] font-semibold">3x more</span>
                 <br />
@@ -72,7 +72,7 @@ const LandingPage = () => {
                 <span className="text-white font-medium">favorite brand.</span>
               </p>
               <div className="mt-15">
-                <button className="text-pop-up-button bg-[#683dff] text-white text-xl sm:text-3xl px-8 sm:px-10 py-3 sm:py-3.5 rounded-full hover:bg-[#5d3dd6] transition-colors">
+                <button className="text-pop-up-button bg-[#683dff] text-white text-xl sm:text-3xl px-8 sm:px-8 py-3 sm:py-3.5 rounded-full hover:bg-[#5d3dd6] transition-colors">
                   START SAVING
                 </button>
               </div>
