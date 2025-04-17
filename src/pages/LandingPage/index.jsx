@@ -60,8 +60,8 @@ const LandingPage = () => {
 
           {/* Right - Text Content */}
           <div className="w-[55%] flex flex-row items-start justify-start sm:justify-start  md:items-left text-center md:text-left space-y-6">
-            <div className="text-center md:pt-[15vh] lg:pt[25vh]">
-              <h1 className="text-bounce-in-left delay-1000 text-4xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight font-[300] text-white font-display">
+            <div className="text-center md:pt-[20vh] lg:pt[25vh]">
+              <h1 className="text-bounce-in-left delay-1000 text-4xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-[1] font-[300] text-white font-display">
                 earn{" "}
                 <span className="text-[#704bff] font-semibold">3x more</span>
                 <br />
