@@ -9,6 +9,11 @@ const Navbar = ({ className, imgClassName }) => (
         src={compoundLogo}
       />
     </div>
+    <div className="">
+      <button className=" bg-[#683dff] text-white text-xs sm:text-xl  px-2 py-[0.2rem] sm:px-3 sm:py-1 rounded-full hover:bg-[#5d3dd6] transition-colors">
+        START SAVING
+      </button>
+    </div>
     {/* <nav className="space-x-1">
       <a
         href="#"

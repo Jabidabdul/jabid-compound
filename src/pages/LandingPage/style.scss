@@ -1,13 +1,151 @@
 @media (min-width: 640px) {
-    .landing-page {
-      display:block !important;
+  .landing-page {
+    display: block !important;
+  }
+  .landing-page-mobile {
+    display: none !important;
+  }
+}
+
+.landing-page-mobile {
+  @keyframes popUpTextFromBottom {
+    0% {
+      transform: translateY(600px); /* Start from below */
+      opacity: 0;
     }
-    .landing-page-mobile{
-        display: none !important;
+    100% {
+      transform: translateY(0); /* Final position */
+      opacity: 1;
+    }
+  }
+  .animate-text-from-bottom {
+    animation: popUpTextFromBottom 1.0s ease-out forwards; /* Adjusted timing */
+    animation-delay: 0s;
+    opacity: 0;
+  }
+  @keyframes popUpScatterMobile {
+    0% {
+      transform: translateY(50px); /* Start from below */
+      opacity: 0;
+      background-color: #683dff; /* Initial color */
+      box-shadow: 0 0 10px rgba(104, 61, 255, 0); /* No blur effect initially */
+    }
+    30% {
+      transform: translateY(20px); /* Move a bit up */
+      background-color: #7e4bff; /* Slightly scattered color */
+      box-shadow: 0 0 10px rgba(104, 61, 255, 0.4); /* Apply light blur */
+    }
+    50% {
+      transform: translateY(10px); /* Slight bounce effect */
+      background-color: #9a63ff; /* Another scattered color */
+      box-shadow: 0 0 10px rgba(104, 61, 255, 0.6); /* Increased blur */
+    }
+    70% {
+      transform: translateY(5px); /* Another small bounce */
+      background-color: #5d3dd6; /* Yet another scattered color */
+      box-shadow: 0 0 10px rgba(104, 61, 255, 0.8); /* More blur */
+    }
+    100% {
+      transform: translateY(0); /* Final position */
+      opacity: 1;
+      background-color: #683dff; /* Final color */
+      box-shadow: 0 0 10px rgba(104, 61, 255, 1); /* Max blur */
+    }
+  }
+  .text-pop-up-button-mobile {
+    animation: popUpScatterMobile 1.5s ease-out forwards; /* Adjusted timing */
+    animation-delay: 3.4s; /* Optional delay */
+    border: 1px solid transparent; /* Optional: can add a border if needed */
+    transition: box-shadow 0.3s ease-in-out; /* Transition for hover effect */
+    position: relative;
+    z-index: 40;
+    opacity: 0; /* Start as invisible */
+  }
+
+  @keyframes slideInAndPush {
+    0% {
+      transform: translateY(-400px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-2rem); // final Y-offset for the lowest card
+      opacity: 1;
     }
   }
 
-.landing-page{
+  @keyframes slideSecondAndPush {
+    0% {
+      transform: translateY(-400px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-40px); // middle card position
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideTopIn {
+    0% {
+      transform: translateY(-400px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-3rem); // topmost card stays
+      opacity: 1;
+    }
+  }
+
+  @keyframes shiftDown1 {
+    0% {
+      transform: translateY(-3);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes shiftDown2 {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(3rem);
+    }
+  }
+  .animate-slide-first {
+    animation: slideInAndPush 0.8s ease-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+  }
+
+  .animate-shift-down-1 {
+    animation: shiftDown1 0.6s ease-out forwards;
+    animation-delay: 2.2s;
+    // opacity: ;
+  }
+
+  .animate-slide-second {
+    animation: slideSecondAndPush 0.8s ease-out forwards;
+    animation-delay: 1.8s;
+    opacity: 0;
+  }
+
+  .animate-shift-down-2 {
+    animation: shiftDown2 0.6s ease-out forwards;
+    animation-delay: 0.8s;
+    // opacity: ;
+  }
+
+  .animate-slide-top {
+    animation: slideTopIn 0.8s ease-out forwards;
+    animation-delay: 2.6s;
+    opacity: 0;
+  }
+}
+
+.landing-page {
   @keyframes bounceInUp {
     0% {
       opacity: 0;
@@ -24,7 +162,7 @@
       transform: translateY(0);
     }
   }
-  
+
   .image-bounce-in-up {
     animation: bounceInUp 1.2s ease-out forwards;
     position: absolute;
@@ -32,24 +170,24 @@
     bottom: 5rem; /* ~bottom-20 */
     z-index: 1;
   }
-  
+
   @media (min-width: 640px) {
     .image-bounce-in-up {
-      bottom: 6.25rem;  /* ~bottom-25 */
-      right: -4.25rem;  /* ~-right-17 */
+      bottom: 6.25rem; /* ~bottom-25 */
+      right: -4.25rem; /* ~-right-17 */
     }
   }
   @keyframes bounceInLeft {
     0% {
-    //   opacity: 1;
+      //   opacity: 1;
       transform: translateX(-100%);
     }
     60% {
-    //   opacity: 1;
+      //   opacity: 1;
       transform: translateX(20px);
     }
     80% {
-    // opacity: 1;
+      // opacity: 1;
       transform: translateX(-5px);
     }
     100% {
@@ -57,7 +195,7 @@
       transform: translateX(0);
     }
   }
-  
+
   .text-bounce-in-left {
     animation: bounceInLeft 1.2s ease-out forwards;
     animation-delay: 1s;
@@ -83,7 +221,7 @@
       transform: translateX(0); /* Final position */
     }
   }
-  
+
   .text-bounce-in-right {
     animation: bounceInRight 1.2s ease-out forwards;
     animation-delay: 1s;
@@ -121,7 +259,7 @@
       box-shadow: 0 0 10px rgba(104, 61, 255, 1); /* Max blur */
     }
   }
-  
+
   .text-pop-up-button {
     animation: popUpScatter 1.5s ease-out forwards; /* Adjusted timing */
     animation-delay: 1s; /* Optional delay */
@@ -131,9 +269,8 @@
     z-index: 0;
     opacity: 0; /* Start as invisible */
   }
-  
+
   .text-pop-up-button:hover {
     box-shadow: 0 0 15px rgba(104, 61, 255, 0.6); /* Slight blur effect on hover */
   }
-
 }
